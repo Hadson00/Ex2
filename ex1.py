@@ -1,21 +1,15 @@
-contador = 0
+def func(vetor):
+    for i in range(len(vetor)):
+        if vetor[i] > 0:
+            vetor[i] = 1
+        else:
+            vetor[i] = 0
+    return vetor
+
 vetor = []
+for i in range(30):
+    n = int(input('Digite um valor: '))
+    vetor.append(n)
 
-while contador < 30:
-    x = int(input("digite um numero positivo ou negativo para vetor: "))
-    vetor.append(x)
-    contador += 1
-
-contador = 0
-while contador < 30:
-    if vetor[contador] > 0: 
-        x = 1
-        print(x)
-        contador += 1
-    elif vetor[contador] < 0: 
-        x = 0
-        print(x)
-        contador += 1
-    else:
-        print(x)
-        contador += 1
+func(vetor)
+print (vetor)

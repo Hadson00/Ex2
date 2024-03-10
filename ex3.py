@@ -1,22 +1,17 @@
-contador = 0
-vetor = []
+def func(vet):
+    for i in range(len(vet)):
+        if vet[i] < 0:
+            vet[i] = 0
+        elif vet[i] < 10:
+            vet[i] = 1
+        else:
+            vet[i] = 2
+    return vet
 
-while contador < 20:
-    x = int(input("Digite um numero: "))
-    vetor.append(x)
-    contador += 1
+vet = []
+for i in range(20):
+    n = int(input('Digite um valor: '))
+    vet.append(n)
 
-contador = 0
-while contador < 20:
-    if vetor[contador] < 10 and vetor[contador] > 0: 
-        x = 1
-        print(x)
-        contador += 1
-    elif vetor[contador] < 0: 
-        x = 0
-        print(x)
-        contador += 1
-    else:
-        x = 2
-        print(x)
-        contador += 1
+func(vet)
+print(vet)
